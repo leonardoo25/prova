@@ -1,0 +1,33 @@
+class ToDoListque:
+    def adicionar_tarefa(self, descricao: str):
+        self.descricao = descricao
+    
+    def excluir_tarefa(self, indice: int):
+        self.indice = indice
+
+    def listar_tarefas(self):
+        print("Tarefa 1: Ir ao mercado")
+        print("Tarefa 2: Passear com o cachorro")
+        print("Tarefa 3: Estudar para a prova")
+
+try:
+    input = int("Escolha uma opcão"):
+    print("1- Adicionar Tarefa")
+    print("2- Excluir Tarefa")
+    print("3- Listar Tarefas")
+
+    menu = input
+    match menu:
+        case 1:
+            ToDoListque.listar_tarefas() + input("Digite a nova Tarefa: ")
+
+        case 2:
+            ToDoListque.listar_tarefas() + input("Digite qual tarefa deve ser removida: ")
+
+        case 3:
+            print("As tarefas são: ")
+            ToDoListque.listar_tarefas()
+
+    except Exception as erro:
+        print("Valor invalido")
+        print(erro.__class__.__name__)
